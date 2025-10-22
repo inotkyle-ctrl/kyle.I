@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Autobiography Portfolio</title>
+    <style>
+        p {
+            text-align: center;
+            font-size: 25px;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: radial-gradient(circle at top, #6d28d9, #1e3a8a, #000000 90%);
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+        
+        header,
+        footer {
+            text-align: center;
+            padding: 1px;
+            background: rgba(0, 0, 0, 0.6);
+            position: fixed;
+            width: 100%;
+            left: 0;
+            z-index: 1000;
+        }
+        
+        header {
+            top: 0;
+        }
+        
+        footer {
+            bottom: 0;
+            font-size: 10px;
+        }
+        
+        .page {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            padding: 80px 30px 60px;
+            text-align: center;
+            position: relative;
+            box-sizing: border-box;
+        }
+        
+        .page:target {
+            display: block;
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        #intro {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: linear-gradient(to right, #9333ea, #4a42e0);
+            color: white;
+            font-weight: bold;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        
+        .btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 10px;
+            border-radius: 50%;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .left {
+            left: 20px;
+        }
+        
+        .right {
+            right: 20px;
+        }
+        
+        .slide-box {
+            margin-top: 40px;
+            width: 80%;
+            height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* --- Collage Style ( MAO NING SA PART SA ALL PICTURE NA MA EDIT) --- */
+        
+        .collage {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-gap: 15px;
+            width: 90%;
+            height: 800px;
+            border-radius: 20px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 30px auto;
+            padding: 1px;
+        }
+        
+        .collage img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        
+        .collage img:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+        /* --- About Page Layout ni about! --- */
+        
+        #about .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+            gap: 40px;
+            height: 80%;
+        }
+        
+        #about .text-box {
+            width: 50%;
+        }
+        
+        #about .text-box h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        #about .text-box p {
+            font-size: 20px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        
+        #about .collage {
+            width: 45%;
+            height: 300px;
+        }
+        /* --- Interests Page Layout --- */
+        
+        #interests .collage {
+            grid-template-columns: repeat(4, 1fr);
+            width: 80%;
+            margin: 40px auto;
+        }
+        /* --- Travel Page Layout --- */
+        
+        #travel .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+            gap: 40px;
+            height: 100%;
+        }
+        
+        #travel .text-box {
+            width: 50%;
+        }
+        
+        #travel .text-box h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        
+        #travel .text-box p {
+            font-size: 20px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        
+        #travel .collage {
+            width: 45%;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Intro Page -->
+    <div id="intro" class="page">
+        <h1>🌌 Welcome to My Galaxy Portfolio</h1>
+        <p>Click below to know more about me</p>
+        <a href="#about" class="btn">Click Here</a>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <a href="#intro" class="nav left">⬅</a>
+        <a href="#interests" class="nav right">➡</a>
+
+        <div class="content">
+            <div class="text-box">
+                <h1>My 22 Years of Existence</h1>
+                <p>
+                    My name is <b>Kyle R. Inot</b>, Who live in
+                    <b>Soong Center Mactan LLC,</b> Im very strict person sometimes when making decision and the result will always matter to me the
+                    <b>most no matter what the process is.</b> But there are also that side of me that 'im a boring person sometimes because I don't really like to go out or hang out with others. I don’t usually interact with everyone.
+                    <b>I often enjoy my own company and prefer staying at home.</b> But I also have a creative side, and I like to spend my time exploring stories and ideas. </p>
+            </div>
+            <!-- 📸 4-Photo Collage -->
+            <div class="collage">
+                <img src="about1.jpg" alt="About 1">
+                <img src="about2.jpg" alt="About 2">
+                <img src="about3.jpg" alt="About 3">
+                <img src="about4.jpg" alt="About 4">
+            </div>
+        </div>
+    </div>
+    <!-- Interests Page -->
+    <div id="interests" class="page">
+        <a href="#about" class="nav left">⬅</a>
+        <a href="#travel" class="nav right">➡</a>
+        <h1>My Interests</h1>
+        <ul style="list-style:none; padding:0; font-size:20px;">
+            <li>📚 Reading Anime Books</li>
+            <li>🎮 Gaming</li>
+        </ul>
+
+        <!-- 4-Photo Collage -->
+        <div class="Interest">
+            <img src="interest1.jpg" alt="Interest 1">
+            <img src="interest2.jpg" alt="Interest 2">
+            <img src="interest3.jpg" alt="Interest 3">
+        </div>
+    </div>
+
+    <!-- Travel Page -->
+    <div id="travel" class="page">
+        <a href="#interests" class="nav left">⬅</a>
+        <a href="#intro" class="nav right">➡</a>
+
+        <div class="content">
+            <div class="text-box">
+                <h1>Places I Visited in Cebu</h1>
+                <p>
+                    Traveling is one of the things that helps me relax and see the world from a new perspective. Whether it’s visiting beautiful beaches, exploring the city lights, or going on nature adventures, each trip reminds me how big and beautiful the world is. It
+                    also helps me appreciate life more and learn about different cultures and people.
+                </p>
+            </div>
+
+            <!-- 🌄 4-Photo Collage -->
+            <div class="collage">
+                <img src="travel1.jpg" alt="Travel 1">
+                <img src="travel2.jpg" alt="Travel 2">
+                <img src="travel3.jpg" alt="Travel 3">
+                <img src="travel4.jpg" alt="Travel 4">
+            </div>
+        </div>
+    </div>
+    <div class="social-links">
+        <a href="https://www.facebook.com/klye Rosalejos Inot" target="_blank"> Facebook</a>
+    </div>
+    <footer>
+        <p>© 2025 Kyle R. Inot | My Autobiography Portfolio</p>
+    </footer>
+</body>
+
+</html>
